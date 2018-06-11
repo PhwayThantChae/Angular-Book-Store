@@ -1,0 +1,22 @@
+<div class="container">
+  <h3>Author</h3>
+  <table class="table" *ngIf="author">
+
+    <tr>
+      <td>id:</td>
+      <td>{{author.id}}</td>
+    </tr>
+
+    <tr>
+      <td>name:</td>
+      <td>{{author.name}}</td>
+    </tr>
+
+    <tr>
+      <td>email:</td>
+      <td>{{author.email}}</td>
+    </tr>
+
+  </table>
+  <app-book-list [books]="books"></app-book-list>
+</div>

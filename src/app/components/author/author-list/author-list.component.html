@@ -1,0 +1,25 @@
+<table class="table table-responsive">
+  <thead class="thead-default">
+
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>Actions</th>
+  </thead>
+  <tbody *ngIf="authors">
+    <tr *ngFor="let author of authors">
+      <td>{{author.id}}</td>
+
+      <td>{{author.name}}</td>
+
+      <td>{{author.email}}</td>
+
+
+      <td>
+        <a class="btn btn-sm btn-info" [routerLink]="['/author',author.id]"> Show </a>
+        <button class="btn btn-sm btn-warning" (click)="updateAuthor(author.id)"> Edit </button>
+        <button class="btn btn-sm btn-danger" (click)="deleteAuthor(author.id)"> Delete </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

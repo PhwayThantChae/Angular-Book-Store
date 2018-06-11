@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-lg-6 col-sm-12">
+    <form [formGroup]="addAuthorForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>id</label>
+        <div class="input-group">
+          <input class="form-control" type="text" name="id" [formControl]="id">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>name</label>
+        <div class="input-group">
+          <input class="form-control" type="text" name="name" [formControl]="name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>email</label>
+        <div class="input-group">
+          <input class="form-control" type="text" name="email" [formControl]="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input class="btn btn-primary" [disabled]="addAuthorForm.invalid" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>
